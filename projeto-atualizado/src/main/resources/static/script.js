@@ -1,6 +1,5 @@
 const API_URL = "http://localhost:8080/usuarios";
 
-// Alterna entre a aba de Login e Cadastro
 function mostrarAba(aba) {
     const formLogin = document.getElementById("formLogin");
     const formCadastro = document.getElementById("formCadastro");
@@ -23,7 +22,6 @@ function mostrarAba(aba) {
     }
 }
 
-// Enviar Cadastro para o Spring Boot
 document.getElementById("formCadastro").addEventListener("submit", async (e) => {
     e.preventDefault();
     const msg = document.getElementById("mensagem");
@@ -56,7 +54,6 @@ document.getElementById("formCadastro").addEventListener("submit", async (e) => 
     }
 });
 
-// Enviar Login para o Spring Boot
 document.getElementById("formLogin").addEventListener("submit", async (e) => {
     e.preventDefault();
     const msg = document.getElementById("mensagem");
