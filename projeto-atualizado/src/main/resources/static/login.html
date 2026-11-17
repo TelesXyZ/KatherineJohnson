@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Biografia Katherine Johnson</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0b132b, #000000);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #0b132b;
+        }
+        p.subtitulo {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 10px;
+            background: none;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            color: #777;
+            transition: 0.3s;
+        }
+        .tab-btn.ativo {
+            color: #3a86ff;
+            border-bottom: 3px solid #3a86ff;
+        }
+        .form-grupo {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        button.btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #3a86ff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        button.btn-submit:hover {
+            background-color: #2667cc;
+        }
+        .oculto {
+            display: none;
+        }
+        #mensagem {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .link-voltar {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #3a86ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Projeto Katherine Johnson</h2>
+    <p class="subtitulo">Faça login ou cadastre-se para acessar</p>
+
+    <div class="tabs">
+        <button class="tab-btn ativo" id="btnTabLogin" onclick="mostrarAba('login')">Entrar</button>
+        <button class="tab-btn" id="btnTabCadastro" onclick="mostrarAba('cadastro')">Cadastrar</button>
+    </div>
+
+    <form id="formLogin">
+        <div class="form-grupo">
+            <label for="loginEmail">E-mail</label>
+            <input type="email" id="loginEmail" required placeholder="seu@email.com">
+        </div>
+        <div class="form-grupo">
+            <label for="loginSenha">Senha</label>
+            <input type="password" id="loginSenha" required placeholder="Sua senha">
+        </div>
+        <button type="submit" class="btn-submit">Entrar</button>
+    </form>
+
+    <form id="formCadastro" class="oculto">
+        <div class="form-grupo">
+            <label for="cadNome">Nome Completo</label>
+            <input type="text" id="cadNome" required placeholder="Digite seu nome">
+        </div>
+        <div class="form-grupo">
+            <label for="cadEmail">E-mail</label>
+            <input type="email" id="cadEmail" required placeholder="seu@email.com">
+        </div>
+        <div class="form-grupo">
+            <label for="cadSenha">Senha</label>
+            <input type="password" id="cadSenha" required placeholder="Crie uma senha">
+        </div>
+        <button type="submit" class="btn-submit">Criar Conta</button>
+    </form>
+
+    <div id="mensagem"></div>
+
+    <a href="index.html" class="link-voltar">← Voltar para a Biografia</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
